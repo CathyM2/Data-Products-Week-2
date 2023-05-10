@@ -1,0 +1,25 @@
+---
+title: "Developing Data Prods Wk 2"
+author: "Cathy M"
+date: "2023-05-10"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+## 10th May 2023
+#### Jack the Ripper - Victim Locations
+```{r }
+MyMap <- leaflet()%>%
+  addTiles()%>%
+  addMarkers(lat = 51.519913, lng=-0.060933, popup = 'Victim 1 - Mary Ann Nichols')%>%
+  addMarkers(lat = 51.5203192256835, lng=-0.07252656590138662, popup = 'Victim 2 - Annie Chapman')%>%
+  addMarkers(lat = 51.513776374706055, lng=-0.06545267584210089, popup = 'Victim 3 (Uncertain) - Elizabeth   Stride')%>%  
+  addMarkers(lat = 51.513830, lng=-0.078070, popup = 'Victim 4 - Catherine Eddowes')%>%
+  addMarkers(lat = 51.51889550674488,lng= -0.07577866468248913, popup = 'Victim 5 -  Mary Jane Kelly')
+MyMap
+
+```
